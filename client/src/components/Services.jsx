@@ -3,11 +3,11 @@ import { BiSearchAlt } from 'react-icons/bi';
 import { RiHeart2Fill } from 'react-icons/ri';
 
 const ServiceCard = ({ color, title, icon, subtitle }) => (
-	<div className='flex flex-row justify-start items-center white-glassmorphism py-3 px-5 m-2 cursor-pointer hover:shadow-xl'>
+	<div className='flex flex-row justify-start items-center white-glassmorphism py-3 px-5 m-2 cursor-pointer hover:shadow-xl max-w-[795px]'>
 		<div className={`w-10 h-10 rounded-full flex justify-center items-center ${color}`}>{icon}</div>
 		<div className='ml-5 flex flex-col flex-1'>
 			<h3 className='text-white text-lg'>{title}</h3>
-			<p className='mt-1 text-white text-sm md:w-9/12'>{subtitle}</p>
+			<p className='mt-1 text-white text-sm md:w-11/12'>{subtitle}</p>
 		</div>
 	</div>
 );
@@ -32,7 +32,7 @@ const Services = () => (
 					color='bg-[#2952E3]'
 					title='Security gurantee'
 					icon={<BsShieldFillCheck fontSize={21} className='text-white' />}
-					subtitle='Our commitment to security is guaranteed. We prioritize privacy and maintain product quality.'
+					subtitle='Our commitment to security is guaranteed. We prioritize privacy and maintain product quality with the best security system'
 				/>
 				<ServiceCard
 					color='bg-[#8945F8]'
