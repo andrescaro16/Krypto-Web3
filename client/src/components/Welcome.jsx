@@ -1,9 +1,8 @@
-import { useContext } from 'react';
 import { AiFillPlayCircle } from 'react-icons/ai';
 import { SiEthereum } from 'react-icons/si';
 import { BsInfoCircle } from 'react-icons/bs';
 
-import { TransactionContext } from '../context/TransactionContext';
+import { useTransactionContext } from '../context/TransactionContext';
 import { shortenAddress } from '../utils/shortenAddress';
 import { Loader } from '.';
 
@@ -24,7 +23,7 @@ const Input = ({ placeholder, name, type, value, handleChange }) => (
 
 
 const Welcome = () => {
-	const { currentAccount, connectWallet, handleChange, sendTransaction, formData, isLoading } = useContext(TransactionContext);
+	const { currentAccount, connectWallet, handleChange, sendTransaction, formData, isLoading } = useTransactionContext();
 
 	const handleSubmit = (e) => {
 		const { addressTo, amount, keyword, message } = formData;
